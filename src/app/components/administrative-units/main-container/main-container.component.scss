@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    padding: 0.625rem 0.625rem 0 0.625rem;
+    min-height: 300px;
+    justify-content: space-between;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+    /* Chỉnh để các box xuống dòng khi không đủ không gian */
+    background: var(--lara-root-surface-ground, #EFF3F8);
+}
+
+.box {
+    width: calc(33.33% - 10px);
+    min-width: 33rem;
+    background: var(--lara-root-surface-section, #FFF);
+    max-height: calc(100vh - 5.5rem);
+    min-height: calc(50vh);
+    border-radius: 0.625rem;
+    border: 1px solid var(--lara-root-surface-border, #CED6DE);
+    display: flex;
+    padding: 0.94rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.box:last-child {
+    margin-right: 0;
+}
+.box-item{
+    min-height: 3.8rem;
+}
+
+.content-city {
+    color: var(--lara-global-text-color, #333);
+    font-size: 1.35rem;
+    font-style: normal;
+    line-height: 1.5rem;
+    float: left;
+    display: flex;
+}
+.p-btn{
+    height: 2rem;
+    width: 2rem;
+}
+.td-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.p-dialog .p-dialog-header {
+    padding: 1rem 1rem 0 1rem;
+  }
+@media screen and (max-width: 500px) {
+    .box {
+        width: calc(50% - 10px);
+        /* Khi màn hình nhỏ hơn 768px, box chiếm 50% */
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .box {
+        width: 100%;
+        /* Khi màn hình nhỏ hơn 480px, box chiếm 100% */
+    }
+}

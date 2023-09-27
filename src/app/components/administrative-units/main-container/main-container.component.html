@@ -1,0 +1,155 @@
+<div class="container">
+  <!-- Tỉnh/Thành phố -->
+  <div class="box p-datatable-scrollable">
+    <div class="grid p-3 min-w-full ">
+        <div class=" col-12 p-0 pb-3 box-item">
+            <p class="content-city font-semibold pl-3 pt-2 m-0">Tỉnh/thành phố</p>
+            <span class="p-input-icon-right" style="float: right;">
+            <i class="pi pi-search"></i>
+            <input type="text" pInputText class="p-inputtext-sm w-19rem" />
+            </span>
+        </div>
+        <div class="col-12 p-0">
+            <p-table class="table" [value]="citys" [scrollable]="true" [scrollHeight]="'calc(100vh - ' + 180 + 'px)'" [tableStyle]="{'margin': '0', 'border-width': '0 0 1px 0'}"
+                styleClass="p-datatable-striped" [ngStyle]="{'width': '100%'}" [rowHover]="true"
+                >
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th class="p-2 text-center">Mã</th>
+                        <th class="td-content pl-3 p-2" >
+                            <span>Tên tỉnh/thành phố</span>
+                            <span>
+                                <p-button [style]="{'float': 'right', 'padding': '0.6rem', 'min-witdh': '8rem'}" label="Thêm mới" icon="pi pi-plus"
+                                    (click)="visibleDialog()"></p-button>
+                            </span>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-unit>
+                    <tr>
+                        <td class="p-2 text-center">{{unit.id}}</td>
+                        <td class="td-content pl-3 p-2">{{unit.name}}
+                            <span style="float: right;">
+                                <p-button [style]="{'height': '2rem', 'width': '2rem'}" icon="pi pi-pencil" styleClass="p-button-rounded p-button-secondary p-button-outlined"></p-button>
+                                <p-button class="pl-2" [style]="{'height': '2rem', 'width': '2rem'}" icon="pi pi-trash" styleClass="p-button-rounded p-button-secondary p-button-outlined"></p-button>
+                            </span>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+        
+    </div>
+  </div>
+
+  <!-- Quận/huyện -->
+  <div class="box p-datatable-scrollable">
+    <div class="grid p-3 min-w-full ">
+        <div class=" col-12 p-0 pb-3 box-item">
+            <p class="content-city font-semibold pl-3 pt-2 m-0">Quận/huyện</p>
+        </div>
+        <div class="col-12 p-0">
+            <p-table class="table" [value]="citys" [scrollable]="true" [scrollHeight]="'calc(100vh - ' + 180 + 'px)'" [tableStyle]="{'margin': '0', 'border-width': '0 0 1px 0'}"
+                styleClass="p-datatable-striped" [ngStyle]="{'width': '100%'}" [rowHover]="true"
+                >
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th class="p-2 text-center">Mã</th>
+                        <th class="td-content pl-3 p-2" >
+                            <span>Tên quận/huyện</span>
+                            <span>
+                                <p-button [style]="{'float': 'right', 'padding': '0.6rem', 'min-witdh': '8rem'}" label="Thêm mới" icon="pi pi-plus"></p-button>
+                            </span>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-unit>
+                    <tr>
+                        <td class="p-2 text-center">{{unit.id}}</td>
+                        <td class="td-content pl-3 p-2">{{unit.name}}
+                            <span style="float: right;">
+                                <p-button [style]="{'height': '2rem', 'width': '2rem'}" icon="pi pi-pencil" styleClass="p-button-rounded p-button-secondary p-button-outlined"></p-button>
+                                <p-button class="pl-2" [style]="{'height': '2rem', 'width': '2rem'}" icon="pi pi-trash" styleClass="p-button-rounded p-button-secondary p-button-outlined"></p-button>
+                            </span>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+        
+    </div>
+  </div>
+
+  <!-- Xã/phường -->
+  <div class="box p-datatable-scrollable">
+    <div class="grid p-3 min-w-full ">
+        <div class=" col-12 p-0 pb-3 box-item">
+            <p class="content-city font-semibold pl-3 pt-2 m-0">Phường/xã</p>
+        </div>
+        <div class="col-12 p-0">
+            <p-table class="table" [value]="citys" [scrollable]="true" [scrollHeight]="'calc(100vh - ' + 180 + 'px)'" [tableStyle]="{'margin': '0', 'border-width': '0 0 1px 0'}"
+                styleClass="p-datatable-striped" [ngStyle]="{'width': '100%'}" [rowHover]="true"
+                >
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th class="p-2 text-center">Mã</th>
+                        <th class="td-content pl-3 p-2" >
+                            <span>Tên phường/xã</span>
+                            <span>
+                                <p-button [style]="{'float': 'right', 'padding': '0.6rem', 'min-witdh': '8rem'}" label="Thêm mới" icon="pi pi-plus"></p-button>
+                            </span>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-unit>
+                    <tr>
+                        <td class="p-2 text-center">{{unit.id}}</td>
+                        <td class="td-content pl-3 p-2">{{unit.name}}
+                            <span style="float: right;">
+                                <p-button [style]="{'height': '2rem', 'width': '2rem'}" icon="pi pi-pencil" styleClass="p-button-rounded p-button-secondary p-button-outlined"></p-button>
+                                <p-button class="pl-2" [style]="{'height': '2rem', 'width': '2rem'}" icon="pi pi-trash" styleClass="p-button-rounded p-button-secondary p-button-outlined" (click)="showConfirm()"></p-button>
+                            </span>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+  </div>
+</div>
+    <!-- Thêm mới / sửa city -->
+<p-dialog [(visible)]="visible" [style]="{width: '30vw'}" [modal]="true">
+    <ng-template pTemplate="header" style="padding: 0;">
+       <h4>Thêm mới tỉnh/thành phố</h4>
+    </ng-template>
+    <div class="grid">
+        <div class="col-6 pl-8 p-2 mt-2 flex align-items-center"> 
+            <p class="text-lg ">Tên tỉnh/thành phố <span class="text-red-500">*</span></p>
+        </div>
+        <div class="col-6 p-2 mt-2">
+            <input pInputText type="text" class="p-inputtext-sm" />
+        </div>
+    </div>
+    <div class="grid">
+        <div class="col-6 pl-8 p-2 mt-2 flex align-items-center"> 
+            <p class="text-lg">Mã bưu chính <span class="text-red-500">*</span></p>
+        </div>
+        <div class="col-6 p-2 mt-2">
+            <input pInputText type="text" class="p-inputtext-sm" />
+        </div>
+    </div>
+    <div class="grid">
+        <div class="col-6 pl-8 p-2 mt-2 flex align-items-center"> 
+            <p class="text-lg">Thứ tự <span class="text-red-500">*</span></p>
+        </div>
+        <div class="col-6 p-2 mt-2">
+            <input pInputText type="text" class="p-inputtext-sm" />
+        </div>
+    </div>
+    <ng-template pTemplate="footer" style="padding: 0;">
+        <p-button label="Hủy" styleClass="p-button-outlined" icon="pi pi-times" (click)="cancel()"></p-button>
+        <p-button pRipple icon="pi pi-check" label="Lưu" (click)="submitCity()"></p-button>
+      </ng-template>
+</p-dialog>
+    <!-- Xóa -->
+<confirm-dialog [(visible)]="show" [confirmText]="'Bạn có chắc chắn muốn xóa thông tin?'"></confirm-dialog>
