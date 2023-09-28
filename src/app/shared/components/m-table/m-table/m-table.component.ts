@@ -8,11 +8,11 @@ import { Constants } from 'src/app/shared/constants/constants';
 })
 export class MTableComponent implements OnInit, AfterViewInit {
   ACTIONS = Constants.ACTIONS;
-//   listDataTypeOT: any[];
-  selectedItem:any = [];
+  //   listDataTypeOT: any[];
+  selectedItem: any = [];
   @Input() items: any[] = [];
   @Input() cols: any[] = [];
-  @Input() selectionMode = "single";
+  @Input() selectionMode = 'single';
   @Input() actions: any[] = [Constants.ACTIONS.EDIT, Constants.ACTIONS.DELETE];
   @Input() totalRecords = 0;
   @Input() dataKey = '';
@@ -29,16 +29,16 @@ export class MTableComponent implements OnInit, AfterViewInit {
   @Output() onDeleteItem = new EventEmitter<any>();
   @Output() selectRow = new EventEmitter<any>();
   @Output() onPageChange = new EventEmitter<any>();
-  @ViewChild("dt", {read: ElementRef}) dataTable!: ElementRef;
-  constructor() {}
+  @ViewChild("dt", { read: ElementRef }) dataTable!: ElementRef;
+  constructor() { }
 
-    ngOnInit(): void {
-    this.selectedItem = this.selectionMode =="single"?{}:[];
+  ngOnInit(): void {
+    this.selectedItem = this.selectionMode == 'single' ? {} : [];
   }
 
-  ngAfterViewInit():void{
+  ngAfterViewInit(): void {
     const parentElement = this.dataTable.nativeElement;
     const pDatatableWrapper = parentElement.querySelector(".p-datatable-wrapper");
-    pDatatableWrapper.style.height=`calc(100vh - ${this.calcHeight}px)`
+    pDatatableWrapper.style.height = `calc(100vh - ${this.calcHeight}px)`
   }
 }

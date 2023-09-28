@@ -4,20 +4,14 @@
   responsiveLayout="scroll"
   [lazy]="isLazyLoad"
   (onLazyLoad)="onPageChange.emit($event)"
-  [paginator]="true"
   [rows]="take"
-  [rowsPerPageOptions]="[40, 60, 80]"
   [showCurrentPageReport]="true"
-  [totalRecords]="totalRecords"
-  currentPageReportTemplate="{first} đến {last} trong tổng số {totalRecords}"
   [selectionMode]="'single'"
   [(selection)]="selectedItem"
   [loading]="loading"
-  [styleClass]="tableStyleClass + ' p-datatable-gridlines m-table'"
+  [styleClass]="tableStyleClass + ' m-table'"
   [rowHover]="true"
   [dataKey]="dataKey"
-  (onRowSelect)="selectRow.emit(selectedItem)"
-  (onRowUnselect)="selectRow.emit(selectedItem)"
   [scrollable]="true"
   [scrollHeight]="'calc(100vh - ' + calcHeight + 'px)'"
 >
@@ -36,7 +30,7 @@
   </ng-template>
 
   <ng-template pTemplate="body" let-rowData let-rowIndex="rowIndex">
-    <tr [pSelectableRow]="rowData">
+    <tr [pSelectableRow]="rowData" class="div-btn">
       <!-- <td style="min-width: 3rem" class="text-center flex justify-content-around" pFrozenColumn alignFrozen="left">
         {{ rowIndex + 1 }}
       </td> -->

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MainContainerComponent } from './main-container.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { MTableModule } from 'src/app/shared/components/m-table/m-table.module';
@@ -23,6 +23,7 @@ import { ConfirmDialogModule } from 'src/app/shared/components/confirm-dialog/co
     ButtonModule,
     DialogModule,
     ConfirmDialogModule,
+    ReactiveFormsModule
 
   ],
   exports: [MainContainerComponent]

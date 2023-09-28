@@ -52,7 +52,14 @@
 }
 .p-dialog .p-dialog-header {
     padding: 1rem 1rem 0 1rem;
+}
+.hidden-div {
+    visibility: hidden; /* Ban đầu ẩn đi */
   }
+  
+.div-btn:hover .hidden-div {
+    visibility: visible; /* Khi hover thì hiển thị */
+}
 @media screen and (max-width: 500px) {
     .box {
         width: calc(50% - 10px);
